@@ -16,7 +16,7 @@ const TitleStyle = (params) => {
   var justifyContent = params.justifyContent || "top";
   var width = params.width || "auto";
   var height = params.height || "auto";
-
+  var fontFamily = params.font || "roboto-old";
   return StyleSheet.create({
     large: {
       flex: flex,
@@ -59,6 +59,21 @@ const TitleStyle = (params) => {
       marginBottom: bottom,
       justifyContent: justifyContent,
       fontSize: 18,
+    },
+    default: {
+      flex: flex,
+      color: textColor,
+      backgroundColor: backgroundColor,
+      alignItems: alignItems,
+      width: width,
+      height: height,
+      marginTop: top,
+      marginLeft: left,
+      marginRight: right,
+      marginBottom: bottom,
+      justifyContent: justifyContent,
+      fontFamily: fontFamily,
+      fontSize: 14,
     },
   });
 };

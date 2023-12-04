@@ -2,6 +2,7 @@ import { Color } from "../../../color/Colors";
 import {
   NormalTextInput,
   PasswordTextInput,
+  DefaultText,
   LargeTitle,
   MediumTitle,
   SmallTitle,
@@ -11,6 +12,18 @@ import {
 import { View, StyleSheet } from "react-native";
 
 const LoginScreen = (params) => {
+  const handleForgotPasswordClick = () => {
+    console.log("Params is Pressed!");
+  };
+  const handleLoginButtonClick = () => {
+    console.log("Login button is clicked!");
+  };
+  const handleUsernameChange = (text) => {
+    console.log("Username is ", text);
+  };
+  const handlePasswordChange = (text) => {
+    console.log("Password is ", text);
+  };
   return (
     <View style={style.parent}>
       <View style={style.center_style}>
@@ -20,10 +33,29 @@ const LoginScreen = (params) => {
         />
       </View>
       <SmallTitle options={{ top: 20 }} text={"Username"} />
-      <EmailTextInput options={{ top: 10 }} hint={"Enter your email"} />
+      <EmailTextInput
+        options={{ top: 10 }}
+        onTextChange={handleUsernameChange}
+        hint={"Enter your email"}
+      />
       <SmallTitle options={{ top: 10 }} text={"Password"} />
-      <PasswordTextInput options={{ top: 10 }} hint={"Enter your password"} />
-      <DefaultButton options={{ top: 10 }} text={"Login"} />
+      <PasswordTextInput
+        options={{ top: 10 }}
+        hint={"Enter your password"}
+        onTextChange={handlePasswordChange}
+      />
+      <DefaultButton
+        options={{ top: 10, justifyContent: "stretch", alignItems: "stretch" }}
+        text={"Login"}
+        onClick={handleLoginButtonClick}
+      />
+      <View style={{ top: 16, alignItems: "flex-end" }}>
+        <DefaultText
+          options={{ bottom: 10 }}
+          text={"Forgot password?"}
+          onClick={handleForgotPasswordClick}
+        />
+      </View>
     </View>
   );
 };

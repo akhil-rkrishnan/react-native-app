@@ -1,6 +1,4 @@
-import React from "react";
 import { StyleSheet } from "react-native";
-import { exp } from "react-native-reanimated";
 import { Color } from "../../../color/Colors";
 
 const ButtonStyle = (params) => {
@@ -15,12 +13,12 @@ const ButtonStyle = (params) => {
   var justifyContent = params.justifyContent || "center";
   var width = params.width || "auto";
   var height = params.height || "auto";
-  var borderWidth = params.borderWidth || 1;
-  var borderRadius = params.borderRadius || 10;
-  var borderColor = params.borderColor || Color.black;
+  var borderWidth = params.borderWidth || 0;
+  var borderRadius = params.borderRadius || 0;
+  var borderColor = params.borderColor || Color.transparent;
   var padding = params.padding || 10;
   return StyleSheet.create({
-    default: {
+    parent: {
       flex: flex,
       color: textColor,
       backgroundColor: backgroundColor,
