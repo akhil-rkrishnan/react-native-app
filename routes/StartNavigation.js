@@ -5,23 +5,17 @@ import {
   NavigationContainer,
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import {
-  LargeTitleScreen,
-  MediumTitleScreen,
-  SmallTitleScreen,
-} from "../src/screens/home/HomeScreen";
+import { LoginScreen } from "../src/screens/login/Login";
 
 const StartStack = createNativeStackNavigator();
 
 function StartStackGroup() {
   return (
     <StartStack.Navigator
-      initialRouteName="Small"
+      initialRouteName="Login"
       screenOptions={{ headerShown: false }}
     >
-      <StartStack.Screen name="Large" component={LargeTitleScreen} />
-      <StartStack.Screen name="Medium" component={MediumTitleScreen} />
-      <StartStack.Screen name="Small" component={SmallTitleScreen} />
+      <StartStack.Screen name="Login" component={LoginScreen} />
     </StartStack.Navigator>
   );
 }
