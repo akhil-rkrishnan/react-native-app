@@ -12,10 +12,12 @@
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
-      "**/*", "assets/fonts/*"
+      "**/*",
+      "assets/fonts/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.NavigationApp"
     },
     "android": {
       "adaptiveIcon": {

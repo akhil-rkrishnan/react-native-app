@@ -11,12 +11,16 @@ import {
 } from "../common/CommonComponents";
 import { View, StyleSheet } from "react-native";
 
-const LoginScreen = (params) => {
+const userName = "temp";
+const password = "temp";
+
+const LoginScreen = ({ navigation }) => {
   const handleForgotPasswordClick = () => {
-    console.log("Params is Pressed!");
+    console.log("Forgot is Pressed!");
   };
   const handleLoginButtonClick = () => {
     console.log("Login button is clicked!");
+    navigation.navigate("List");
   };
   const handleUsernameChange = (text) => {
     console.log("Username is ", text);

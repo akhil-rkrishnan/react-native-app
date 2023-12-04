@@ -75,7 +75,7 @@ const PasswordTextInput = (params) => {
 const DefaultButton = (params) => {
   return (
     <View style={ButtonStyle(params.options).parent} onPress={params.onClick}>
-      <Button title={params.text} />
+      <Button title={params.text} onPress={params.onClick} />
     </View>
   );
 };

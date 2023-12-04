@@ -6,6 +6,7 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { LoginScreen } from "../src/screens/login/Login";
+import { MyListComponent } from "../src/screens/home/ItemList";
 
 const StartStack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ function StartStackGroup() {
       screenOptions={{ headerShown: false }}
     >
       <StartStack.Screen name="Login" component={LoginScreen} />
+      <StartStack.Screen name="List" component={MyListComponent} />
     </StartStack.Navigator>
   );
 }
