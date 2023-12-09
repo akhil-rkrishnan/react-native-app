@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { exp } from "react-native-reanimated";
+import "../../../assets/fonts";
 
 const TitleStyle = (params) => {
   var backgroundColor = params.backgroundColor || "#fff";
@@ -12,8 +13,8 @@ const TitleStyle = (params) => {
   var flex = params.flex || 1;
   var alignItems = params.alignItems || "center";
   var justifyContent = params.justifyContent || "top";
-  var width = params.width || "auto"
-  var height = params.height || "auto"
+  var width = params.width || "auto";
+  var height = params.height || "auto";
   return StyleSheet.create({
     large: {
       flex: flex,

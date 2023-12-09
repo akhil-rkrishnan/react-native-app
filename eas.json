@@ -11,12 +11,12 @@
       "distribution": "internal"
     },
     "production": {
-      "distribution": "store"  // Update this line for store distribution
+      "distribution": "store"
     }
   },
   "submit": {
     "production": {
-      // Add any additional submission configurations as needed
+     
     }
   }
 }

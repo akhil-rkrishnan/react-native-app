@@ -31,6 +31,7 @@ const TitleStyle = (params) => {
       marginBottom: bottom,
       justifyContent: justifyContent,
       fontSize: 30,
+      fontFamily: "roboto-medium",
     },
     medium: {
       flex: flex,
@@ -45,6 +46,7 @@ const TitleStyle = (params) => {
       marginBottom: bottom,
       justifyContent: justifyContent,
       fontSize: 25,
+      fontFamily: "roboto-medium",
     },
     small: {
       flex: flex,
@@ -59,6 +61,7 @@ const TitleStyle = (params) => {
       marginBottom: bottom,
       justifyContent: justifyContent,
       fontSize: 18,
+      fontFamily: "roboto-medium",
     },
     default: {
       flex: flex,
@@ -74,6 +77,7 @@ const TitleStyle = (params) => {
       justifyContent: justifyContent,
       fontFamily: fontFamily,
       fontSize: 14,
+      fontFamily: "roboto-medium",
     },
   });
 };
