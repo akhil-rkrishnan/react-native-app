@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Color } from "../../../color/Colors";
 import {
   NormalTextInput,
@@ -15,6 +16,15 @@ const userName = "temp";
 const password = "temp";
 
 const LoginScreen = ({ navigation }) => {
+  var [displayName, setDisplayName] = useState("User");
+  useEffect(() => {
+    fetch("http://localhost:5000/base")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response data", data["loginData"]);
+        setDisplayName(data["loginData"]["userName"] || "User");
+      });
+  }, []);
   const handleForgotPasswordClick = () => {
     console.log("Forgot is Pressed!");
   };
@@ -33,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
       <View style={style.center_style}>
         <LargeTitle
           options={{ top: 20, justifyContent: "center" }}
-          text={"Welcome to my login"}
+          text={"Welcome " + displayName}
         />
       </View>
       <SmallTitle options={{ top: 20 }} text={"Username"} />

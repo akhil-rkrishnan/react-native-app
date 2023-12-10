@@ -9,13 +9,10 @@ const App = () => {
   useEffect(() => {
     const fetchFonts = async () => {
       try {
-        console.log("Waiting to load fonts...");
         await getFonts();
         setFontLoaded(true);
-        console.log("fonts loaded");
       } catch (exception) {
         console.log(exception);
-        console.log("fonts load failed");
       }
     };
     fetchFonts();
